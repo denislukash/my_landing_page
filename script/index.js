@@ -2,7 +2,7 @@
 
                        /*HEADER*/
 
-$(window).load = function () {
+// $(document).onload = function () {
     let $name = $(".name").find("h1");
     let $position = $(".name").find("p");
 
@@ -33,7 +33,7 @@ $(window).load = function () {
         $($position).animate_Text();
 
     });
-};
+// };
 
 
 
