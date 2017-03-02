@@ -36,18 +36,5 @@
 // };
 
 
-                        /*SKILLS*/
 
-function showSkills() {
-    
-    let $skills = $(".skill_container").find(".skill");
 
-    for(let i = 0; i < $skills.length; i++) {
-        setTimeout(()=>{
-            $($skills[i]).animate({
-                top : "20%",
-                opacity : 1
-            }, 2000, "easeOutBounce")
-        }, 800*i)
-    }
-}

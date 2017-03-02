@@ -1,20 +1,39 @@
 "use strict";
 
-let $header = $("header");
-
-let tempScrollTop, currentScrollTop = 0;
-
-$($header).scroll(function () {
-
-    console.log("scroll!");
-
-    currentScrollTop = $header.scrollTop();
-
-    if(tempScrollTop < currentScrollTop){
-        console.log("scroll down!")
-    }else if(tempScrollTop > currentScrollTop){
-        console.log("scroll up!")
-    }
-
-    tempScrollTop = currentScrollTop;
+let $skills = $(".skill_container").find(".skill");
+let showSkills = {top: "25%", opacity: 1, duration: 2000};
+let show = skills.bind(showSkills);
+let hideSkills = {top: "-200%", opacity: 0, duration: 100};
+                           /*SLIDER*/
+let controller = $.superscrollorama({
+    isVertical: true,
+    triggerAtCenter: false,
+    playoutAnimations: true
 });
+
+controller.pin($("body"), 500, {
+    anim: (new TimelineLite())
+        .append(
+            TweenMax.to($(".skills-block"), 2, {css:{top: 0}})
+        ),
+    onPin: show()
+});
+
+
+
+                        /*SKILLS*/
+
+
+
+function skills() {
+
+    for(let i = 0; i < $skills.length; i++) {
+        setTimeout(()=>{
+            $($skills[i]).animate({
+                top : this.top,
+                opacity : this.opacity
+            }, this.duration, "easeOutBounce")
+        }, 800*i)
+    }
+}
+
