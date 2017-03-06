@@ -1,0 +1,10 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "devDependencies": {
+    "file-watcher-webpack-plugin": "^1.1.0",
+    "uglify-js": "github:mishoo/UglifyJS2#harmony",
+    "webpack": "^2.2.1",
+    "webpack-uglify-js-plugin": "^1.1.9"
+  }
+}

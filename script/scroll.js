@@ -1,9 +1,11 @@
 "use strict";
 
 let $skills = $(".skill_container").find(".skill");
-let showSkills = {top: "25%", opacity: 1, duration: 2000};
-let show = skills.bind(showSkills);
-// let hideSkills = {top: "-200%", opacity: 0, duration: 100};
+let showSkillsParam = {top: "15%", opacity: 1, duration: 1000};
+let showSkills = skills.bind(showSkillsParam);
+let $proposotionBlocksArray = $(".actions div")
+console.log($proposotionBlocksArray);
+
                            /*SLIDER*/
 let controller = $.superscrollorama({
     isVertical: true,
@@ -11,21 +13,22 @@ let controller = $.superscrollorama({
     playoutAnimations: true
 });
 
-controller.pin($("body"), 1500, {
+let scrollDuration = 3500;
+
+controller.pin($("body"), scrollDuration, {
     anim: (new TimelineLite())
         .append(
-            TweenMax.to($(".skills-block"), 4, {css:{top: 0}})
+            TweenMax.to($(".skills-block"), 5, {css:{top: 0}, onComplete: showSkills})
         )
         .append(
-            TweenMax.to($(".education_block"), 4, {css:{top:0}})
+            TweenMax.to($(".education_block"), 5, {css:{top:0}})
+        )
+        .append(
+            TweenMax.to($(".portfolio_block"), 5, {css:{top:0}, onComplete: showPropositionToChooseGame, onCompleteParams: [$proposotionBlocksArray]})
         )
 });
 
-
-
                         /*SKILLS*/
-
-
 
 function skills() {
 
@@ -35,7 +38,27 @@ function skills() {
                 top : this.top,
                 opacity : this.opacity
             }, this.duration, "easeOutBounce")
-        }, 800*i)
+        }, 600*i)
     }
 }
+
+function showPropositionToChooseGame(blockArray) {
+    console.log(blockArray);
+     $.Deferred(function () {
+        this.resolve();
+    }).then(function () {
+        return $(blockArray[0]).animate({
+            "opacity" : 1
+        },2000).promise()
+    }).then(function () {
+        return $(blockArray[1]).animate({
+            "opacity" : 1
+        },2000).promise()
+    }).then(function () {
+        $(blockArray[2]).animate({
+            "opacity" : 1
+        },2000)
+    })
+}
+
 

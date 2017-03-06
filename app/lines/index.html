@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="game-area">
+        <table>
+            <tr id="score-and-time">
+                <td>
+                    <table>
+                        <tr style="width: 100%">
+                            <td class="score">Points: <span id="score">0</span></td>
+                            <td class="steps">Step: <span id="step">0</span> </td>
+                            <td class="next_balls_area">
+                                <table id="next_ball_area" class="hidden">
+                                    <tr>
+                                        <td><div class="ball next_ball"></div></td>
+                                        <td><div class="ball next_ball"></div></td>
+                                        <td><div class="ball next_ball"></div></td>
+                                        <td><div class="ball next_ball"></div></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr id="game-field"></tr>
+        </table>
+        <div class="button_container">
+            <div class="buttons">
+                <div class="new_game_button_container">
+                    <a class="button_new" >
+                        <img src="app/lines/image/ButtonNewGame.png">
+                    </a>
+                </div>
+                <div class="button_set_container">
+                    <a class="button_sett">
+                        <img src="app/lines/image/settings-button.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    <div id="game_parameters" class="background_window" style="display: none;">
+        <form class="form" id="settings_form">
+            <div class="settings"><span>Настройки</span></div>
+            <span class="test">Выберите размер поля:</span><br>
+            <div class="radio_area">
+                <input type="radio" name="field_size" id="radio_1" value="field7x7"><label for="radio_1">7x7</label>
+            </div>
+            <div class="radio_area">
+                <input type="radio" id="radio_2" name="field_size" value="field9x9"><label for="radio_2">9x9</label>
+            </div>
+            <div class="radio_area last_element">
+                <input type="radio" id="radio_3" name="field_size" value="field11x11"><label for="radio_3">11x11</label>
+            </div>
+            <div class="checkbox_area" id="checkbox_area_id">
+                <input name="hint" type="checkbox" id="checkbox1">
+                <label for="checkbox1">Показывать следующие шары</label>
+            </div>
+            <div class="confirm_button_area">
+                <input type="image" src="app/lines/image/ok_button.png" class="confirm_button">
+            </div>
+            <div class="cancel_button_area">
+                <a class="cancel_button" href="#"><img src="app/lines/image/cancle_button.png"></a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="lines_rules">
+    <p>On field standard size 9 x 9 every step appear 3 balls random color.
+            At all, in game 7 different colors of ball,you must build it at horizontal or
+    vertical line. Balls are delete after 4 or more balls at line. For each delete balls
+    you get scores( for 4 balls - 8, 5-10, 6-18, 7-21, 8-32, 9-36, 10-50, 11-55 ).
+    After balls delete - appear random ball postponed to next move.On bottom side
+    of game field you can choose field-size and can switch on hints.
+        If field size 7x7 for delete enough 3 balls same color build on line.After
+        each step appears 2 random balls. If field size 11x11, balls delete after 5 and more
+        same color build on line and after steps appear 4 random balls.A task - score more
+        points. Good luck!</p>
+</div>
+</body>
+</html>
