@@ -1,0 +1,35 @@
+@amount: 9;
+
+@url: "../image/";
+
+.size{
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+}
+
+.createImageClass (@index: 1) when (@index < @amount) {
+
+  @currentUrl: ~'@{url}@{index}.jpg';
+
+    &.image-@{index} {
+      background: url(@currentUrl);
+      .size;
+    }
+
+  .createImageClass(@index + 1);
+
+}
+
+.createImageClass ();
+
+.close {
+  background: url(../image/close.png);
+  .size;
+}
+
+.delete {
+  background: rgba(129, 127, 127, 1);
+  .size;
+}
+

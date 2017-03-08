@@ -1,0 +1,66 @@
+.size {
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+.image-1 {
+    background: url(../image/1.jpg);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+.image-2 {
+    background: url(../image/2.jpg);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+.image-3 {
+    background: url(../image/3.jpg);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+.image-4 {
+    background: url(../image/4.jpg);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+.image-5 {
+    background: url(../image/5.jpg);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+.image-6 {
+    background: url(../image/6.jpg);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+.image-7 {
+    background: url(../image/7.jpg);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+.image-8 {
+    background: url(../image/8.jpg);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+.close {
+    background: url(../image/close.png);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+
+.delete {
+    background: rgba(255, 253, 253, 0);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}

@@ -33,5 +33,12 @@ $linesTitleImage.on("click", function () {
     })
 });
 
+$pairsTitleImage.on("click", function () {
+    console.log("event!");
+    $($gameFieldHolder).load("app/pairs/index.html .holder_pairs");
+    $.getScript("app/pairs/script/index.js")
+    
+});
+
 
 
