@@ -24,10 +24,12 @@ $linesTitleImage.on("click", function () {
     }).then(function () {
         setTimeout(()=>{
             $($textinfogames).animate({
-               "top" : "100%"
+               "top" : "100%",
+                "opacity" : 0
             },2000);
             $($githubInfo).animate({
-                "top" : "-8%"
+                "top" : 0,
+                "opacity" : 1
             },2000)
         },10000);
     })
