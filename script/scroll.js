@@ -1,10 +1,7 @@
 "use strict";
 
 let $skills = $(".skill_container").find(".skill");
-let showSkillsParam = {top: "15%", opacity: 1, duration: 1000};
-let showSkills = skills.bind(showSkillsParam);
-let $proposotionBlocksArray = $(".actions div")
-console.log($proposotionBlocksArray);
+let $proposotionBlocksArray = $(".actions div");
 
                            /*SLIDER*/
 let controller = $.superscrollorama({
@@ -13,51 +10,51 @@ let controller = $.superscrollorama({
     playoutAnimations: true
 });
 
-let scrollDuration = 3500;
+let scrollDuration = 5000;
 
 controller.pin($("body"), scrollDuration, {
     anim: (new TimelineLite())
         .append(
-            TweenMax.to($(".skills-block"), 5, {css:{top: 0}, onComplete: showSkills})
+            TweenMax.to($(".skills-block"), .25, {css:{top: 0}, onComplete: showSkills})
         )
         .append(
-            TweenMax.to($(".education_block"), 5, {css:{top:0}})
+            TweenMax.to($(".education_block"), .25, {css:{top:0}})
         )
         .append(
-            TweenMax.to($(".portfolio_block"), 5, {css:{top:0}, onComplete: showPropositionToChooseGame, onCompleteParams: [$proposotionBlocksArray]})
+            TweenMax.to($(".portfolio_block"), .25, {css:{top:0}, onComplete: showPropositionToChooseGame, onCompleteParams: [$proposotionBlocksArray]})
         )
 });
 
-                        /*SKILLS*/
-
-function skills() {
+function showSkills() {
 
     for(let i = 0; i < $skills.length; i++) {
         setTimeout(()=>{
             $($skills[i]).animate({
-                top : this.top,
-                opacity : this.opacity
-            }, this.duration, "easeOutBounce")
-        }, 600*i)
+                top : "15%",
+                opacity : 1
+            }, 3000, "easeOutBounce");
+            $($skills[i]).css({
+                display : "block"
+            })
+        }, 400*i)
     }
 }
 
 function showPropositionToChooseGame(blockArray) {
-    console.log(blockArray);
      $.Deferred(function () {
         this.resolve();
     }).then(function () {
         return $(blockArray[0]).animate({
             "opacity" : 1
-        },2000).promise()
+        },1500).promise()
     }).then(function () {
         return $(blockArray[1]).animate({
             "opacity" : 1
-        },2000).promise()
+        },1500).promise()
     }).then(function () {
         $(blockArray[2]).animate({
             "opacity" : 1
-        },2000)
+        },1500)
     })
 }
 

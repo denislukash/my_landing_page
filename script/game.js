@@ -29,15 +29,14 @@ $linesTitleImage.on("click", function () {
             $($githubInfo).animate({
                 "top" : "-8%"
             },2000)
-        },5000);
+        },10000);
     })
 });
 
 $pairsTitleImage.on("click", function () {
-    console.log("event!");
     $($gameFieldHolder).load("app/pairs/index.html .holder_pairs");
-    $.getScript("app/pairs/script/index.js")
-    
+    $.getScript("app/pairs/script/index.js");
+    $($rulesContainer).load("app/pairs/index.html #pairs_rules");
 });
 
 

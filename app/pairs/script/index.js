@@ -25,8 +25,8 @@ scoreCounter.__proto__.startReversCountdown = (self) => {
 var score = document.querySelector("#score");
 var time = document.querySelector("#time");
 
-const CLOSED_PICTURE_CLASS = "close";
-const DELETE_PICTURE_CLASS = "delete";
+var CLOSED_PICTURE_CLASS = "close";
+var DELETE_PICTURE_CLASS = "delete";
 
 var fieldSize = {width: 4, height: 4};
 
@@ -64,7 +64,7 @@ var table = createFieldOnHTML(fieldSize);
 
 document.querySelector(".game_container").appendChild(table);
 
-const imageQuantity = 9;
+var imageQuantity = 9;
 var imagesClasses = [];
 
 //fill all classes of image to array
