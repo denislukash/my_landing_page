@@ -30,7 +30,7 @@ function showSkills() {
     for(let i = 0; i < $skills.length; i++) {
         setTimeout(()=>{
             $($skills[i]).animate({
-                top : "15%",
+                top : "12%",
                 opacity : 1
             }, 3000, "easeOutBounce");
             $($skills[i]).css({

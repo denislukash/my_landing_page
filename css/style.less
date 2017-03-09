@@ -147,11 +147,11 @@ header {
     .skill_container {
       width: 100%;
       display: flex;
-      padding: 10% 5% 13% 5%;
+      padding: 5% 5% 13% 5%;
       justify-content: center;
 
         .holder {
-          width: 25%;
+          width: 30%;
           position: relative;
           height: 300px;
 
@@ -167,12 +167,12 @@ header {
               opacity: 0;
               font-family: "Gotham Book", sans-serif;
               color: white;
-              font-size: 12px;
+              font-size: 1vw;
               display: none;
 
                 img {
-                  width: 50px;
-                  height: 60px;
+                  width: 60px;
+                  height: 70px;
                   margin: 0 auto;
                 }
 
@@ -204,7 +204,7 @@ header {
       font-family: "Gotham Book", sans-serif;
       line-height: 1.7vw;
       padding: 5%;
-      font-size: 1.4vw;
+      font-size: 1.3vw;
       text-align: justify;
     }
 
@@ -241,6 +241,7 @@ header {
 }
 
 .portfolio_block {
+  @standartfont: 'Architects Daughter', cursive;
   .block;
   background: url(../image/game/background.png) no-repeat;
   background-size: cover;
@@ -260,7 +261,7 @@ header {
     color: white;
 
       h2 {
-        font-family: Pacifico, cursive;
+        font-family: @standartfont;
         color: white;
         text-align: center;
         font-size: 1.8vw;
@@ -302,7 +303,7 @@ header {
     width: 50%;
     padding-top: 200px;
     text-align: center;
-    font-family: Pacifico, cursive;
+    font-family: @standartfont;
     color: white;
 
       .actions{
@@ -332,10 +333,10 @@ header {
     margin-left: 5%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    font-family: Pacifico, cursive;
+    font-family: @standartfont;
     color: white;
     padding: 10px;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     text-align: center;
   }
 
@@ -348,7 +349,7 @@ header {
     left: 20%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    font-family: 'Pacifico', cursive;
+    font-family: @standartfont;
     color: white;
 
       .info{
@@ -361,7 +362,7 @@ header {
 
       .github {
         position: absolute;
-        top: 100%;
+        top: 110%;
         left: 25%;
         img{
           width: 50px;
