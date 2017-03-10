@@ -11,9 +11,15 @@ let $textinfogames = $($gamesInfo).find(".info");
 let $githubInfo = $($gamesInfo).find(".github");
 
 $linesTitleImage.on("click", function () {
+
+    $.Deferred(function () {
+        this.resolve();
+    }).then(function () {
+       return $($gameFieldHolder).load("app/lines/index.html #game-area").promise()
+    }).then(function () {
+        $.getScript("app/lines/lines.js");
+    });
     
-    $($gameFieldHolder).load("app/lines/index.html #game-area");
-    $.getScript("app/lines/lines.js");
     $($rulesContainer).load("app/lines/index.html #lines_rules");
 
     $.Deferred(function () {
@@ -36,8 +42,13 @@ $linesTitleImage.on("click", function () {
 });
 
 $pairsTitleImage.on("click", function () {
-    $($gameFieldHolder).load("app/pairs/index.html .holder_pairs");
-    $.getScript("app/pairs/script/index.js");
+    $.Deferred(function () {
+        this.resolve()
+    }).then(function () {
+       return $($gameFieldHolder).load("app/pairs/index.html .holder_pairs").promise()
+    }).then(function () {
+        $.getScript("app/pairs/script/index.js");
+    });
     $($rulesContainer).load("app/pairs/index.html #pairs_rules");
 });
 

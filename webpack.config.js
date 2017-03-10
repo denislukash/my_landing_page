@@ -7,7 +7,7 @@ module.exports = {
     output: {
         filename: './script/bundle.js'
     },
-    watch: true,
+    watch: false,
     watchOptions: {
         aggregateTimeout: 100
     },
