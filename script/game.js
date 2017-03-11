@@ -1,7 +1,5 @@
 "use strict";
-
                         /*CHOOSE GAME*/
-
 let $linesTitleImage = $(".lines_title").find("img");
 let $pairsTitleImage = $(".pairs_title").find("img");
 let $gameFieldHolder = $(".game-field-container");

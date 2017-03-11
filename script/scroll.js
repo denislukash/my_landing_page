@@ -15,13 +15,13 @@ let scrollDuration = 5000;
 controller.pin($("body"), scrollDuration, {
     anim: (new TimelineLite())
         .append(
-            TweenMax.to($(".skills-block"), .25, {css:{top: 0}, onComplete: showSkills})
+            TweenMax.to($(".skills-block"), 5, {css:{top: 0}, onComplete: showSkills})
         )
         .append(
-            TweenMax.to($(".education_block"), .25, {css:{top:0}})
+            TweenMax.to($(".education_block"), 5, {css:{top:0}})
         )
         .append(
-            TweenMax.to($(".portfolio_block"), .25, {css:{top:0}, onComplete: showPropositionToChooseGame, onCompleteParams: [$proposotionBlocksArray]})
+            TweenMax.to($(".portfolio_block"), 5, {css:{top:0}, onComplete: showPropositionToChooseGame, onCompleteParams: [$proposotionBlocksArray]})
         )
 });
 
@@ -36,7 +36,7 @@ function showSkills() {
             $($skills[i]).css({
                 display : "block"
             })
-        }, 400*i)
+        }, 300*i)
     }
 }
 
