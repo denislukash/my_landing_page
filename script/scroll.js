@@ -3,26 +3,21 @@
 let $skills = $(".skill_container").find(".skill");
 let $proposotionBlocksArray = $(".actions div");
 
-                           /*SLIDER*/
-let controller = $.superscrollorama({
-    isVertical: true,
-    triggerAtCenter: false,
-    playoutAnimations: true
+                           /*SCROLLING*/
+$(window).on("load", function () {
+    let $sections = $(".section");
+    let findex = 1;
+    $.scrollify({
+        section : ".section",
+        before:function(i, section) {
+            if(i === 1)showSkills();
+            if(i === 3)showPropositionToChooseGame($proposotionBlocksArray);
+        }
+    });
 });
 
-let scrollDuration = 5000;
-
-controller.pin($("body"), scrollDuration, {
-    anim: (new TimelineLite())
-        .append(
-            TweenMax.to($(".skills-block"), 5, {css:{top: 0}, onComplete: showSkills})
-        )
-        .append(
-            TweenMax.to($(".education_block"), 5, {css:{top:0}})
-        )
-        .append(
-            TweenMax.to($(".portfolio_block"), 5, {css:{top:0}, onComplete: showPropositionToChooseGame, onCompleteParams: [$proposotionBlocksArray]})
-        )
+$(".scroll").find("img").on("click", function () {
+    $.scrollify.next();
 });
 
 function showSkills() {
