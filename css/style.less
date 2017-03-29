@@ -1,10 +1,11 @@
-@block_start_position: 110%;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+//@block_start_position: 100%;
 .block {
   width: 100%;
   height: 100%;
   position: relative;
 }
-
 .opacity_text(@top, @left, @color) {
   position: absolute;
   font-size: 15vw;
@@ -13,231 +14,112 @@
   left: @left;
   top: @top;
 }
-body{
-  width: 100%;
-}
-
-header {
-  .block;
-  background: url(../image/header/background.png);
-  background-size: cover;
-
-    .top {
-      display: flex;
-
-      .logo {
-        margin-left: 5%;
-        margin-top: 20px;
-        width: 25%;
-      }
-        nav {
-          text-align: right;
-          width: 75%;
-
-            a {
-              text-decoration: none;
-              color: white;
-              padding-right: 3%;
-              border-radius: 10px;
-
-                img{
-                  padding-top: 5%;
-                  width: 25px;
-                  height: 25px;
-                  opacity: 0.8;
-                }
-            }
-        }
-    }
-
-    .name {
-      margin: 0 auto;
-      width: 100%;
-      padding-top: 10%;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      height: 45%;
-
-        h1 {
-          color: white;
-          font-family: 'Anton', sans-serif;
-          font-size: 10vw;
-          letter-spacing: 5px;
-          text-shadow : 0 -8px 20px white;
-          position: absolute;
-          top: 25%;
-          left: -70%;
-        }
-
-        p{
-          color: #11749e;
-          font-family: "Gotham Medium", sans-serif;
-          letter-spacing: 5px;
-          text-shadow: 0 -5px 30px #11749e;
-          position: absolute;
-          top: 67%;
-          left: 33%;
-          font-size: 1vw;
-
-          display: none;
-
-          .new {
-            opacity: 0;
-          }
-
-          .p_opacity {
-            -webkit-transition: opacity .1s ease-in-out;
-            -moz-transition: opacity .1s ease-in-out;
-            -ms-transition: opacity .1s ease-in-out;
-            -o-transition: opacity .1s ease-in-out;
-            transition: opacity .1s ease-in-out;
-            opacity: 1
-          }
-        }
-    }
-
-  .scroll{
-    text-align: center;
-    margin-top: 4%;
-    z-index: 100;
-
-    p{
-      color: white;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 10px;
-      padding-bottom: 1%;
-    }
-    img{
-      width: 35px;
-      height: 35px;
-      cursor: pointer;
-      border-radius: 15px;
-      &:hover{
-        box-shadow: inset 0 0 10px white;
-      }
-    }
-  }
-}
-
-.skills-block{
+.skills-block {
   .block;
   background: #11749e;
   display: flex;
   flex-wrap: wrap;
-  top: @block_start_position;
+  //top: @block_start_position;
 
-    .head {
-      width: 100%;
-      position: relative;
+  .head {
+    width: 100%;
+    height: 30%;
+    position: relative;
+    text-align: center;
+
+    p {
+      .opacity_text(0, 27%, rgba(0, 0, 0, 0.05));
+    }
+
+    h1 {
+      margin-top: 5%;
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+      font-size: 2vw;
+    }
+  }
+
+  .programmer-skills {
+    width: 50%;
+    height: 100%;
+    position: relative;
+
+    .programmer {
+      position: absolute;
+      left: 40%;
+      top: 100%;
+      width: 30%;
+      height: 35%;
+    }
+
+    .skills(@left, @top) {
+      width: 15%;
       text-align: center;
+      position: absolute;
+      height: 17%;
+      top: @top;
+      left: @left;
+      opacity: 0;
 
-        p {
-          .opacity_text(10%, 27%, rgba(0, 0, 0, 0.05));
-        }
-
-        h1 {
-          margin-top: 10%;
-          font-family: "Gotham Medium", sans-serif;
-          color: white;
-          font-size: 2vw;
-        }
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
-
-    .skill_container {
-      width: 100%;
-      display: flex;
-      padding: 5% 5% 13% 5%;
-      justify-content: center;
-
-        .holder {
-          width: 30%;
-          position: relative;
-          height: 300px;
-
-            .html,
-            .css,
-            .js,
-            .library {
-              width: 100%;
-              text-align: center;
-              position: absolute;
-              height: 100%;
-              top:-200%;
-              opacity: 0;
-              font-family: "Gotham Book", sans-serif;
-              color: white;
-              font-size: 1vw;
-              display: none;
-
-                img {
-                  width: 60px;
-                  height: 70px;
-                  margin: 0 auto;
-                }
-
-                p{
-                  padding: 10%;
-                }
-            }
-        }
-
+    .html {
+      .skills(65%, 5%)
     }
-}
+    .css {
+      .skills(30%, 5%)
+    }
+    .js {
+      .skills(25%, 45%);
+      width: 22%;
+      height: 20%;
+    }
+    .jquery {
+      .skills(71%, 28%);
+      height: 15%;
+      width: 25%;
+    }
+    .webpack {
+      .skills(66%, 46%)
+    }
+    .github {
+      .skills(17%, 25%);
+      height: 14%;
+      width: 25%;
+    }
+  }
+  .resume {
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    position: relative;
 
-.education_block {
-  .block;
-  display: flex;
-  flex-wrap: wrap;
-  top: @block_start_position;
-    div{
+    img{
       width: 50%;
       height: 50%;
-      text-align: center;
-      h2{
-        padding-top: 5px;
-        font-size: 2vw;
-      }
+      padding-top: 5%;
+      padding-bottom: 20px;
+      display: none;
     }
 
-    .p {
-      font-family: "Gotham Book", sans-serif;
-      line-height: 1.5vw;
-      padding: 5%;
-      font-size: 1.3vw;
-      text-align: justify;
-    }
-
-    .university_text {
-      background: #222222;
+    .download_pdf {
+      display: block;
+      text-decoration: none;
       color: white;
-      p{
-        .p;
-      }
+      border: 2px solid white;
+      border-radius: 10px;
+      width: 25%;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      margin: 0 auto;
+      font-size: 1.3vw;
+      opacity: 0;
     }
+  }
 
-    .source_it_text {
-      background: #f3f3f3;
-      p{
-        .p;
-      }
-    }
-
-    .picture_university {
-      background: url(../image/education/univercity.png);
-      background-size: cover;
-    }
-
-    .source_it_picture {
-      background: url(../image/education/cources.png);
-      background-size: cover;
-    }
-
-    @color_ed_block_h1: rgba(15, 27, 148, 0.38);
-
-    #univ_h1 {
-      .opacity_text(30%, 15%, @color_ed_block_h1)
-    }
 }
 
 .portfolio_block {
@@ -246,7 +128,7 @@ header {
   background: url(../image/game/background.png) no-repeat;
   background-size: cover;
   display: flex;
-  top: @block_start_position;
+  //top: @block_start_position;
 
   .game_for_you{
     .opacity_text(1%, 20%, rgba(182, 182, 182, 0.51));

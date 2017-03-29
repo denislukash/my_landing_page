@@ -5,15 +5,13 @@
     <meta property="og:title" content="Denis Lukash" />
     <meta property="og:image" content="image/title.png" />
     <title>Denis Lukash</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="css/reset.css" rel="stylesheet" type="text/css">
-    <link href="css/fonts/fonts.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="app/lines/css/balls.css" rel="stylesheet" type="text/css">
-    <link href="app/lines/css/settingsmenu.css" rel="stylesheet" type="text/css">
-    <link href="app/lines/css/style.css" rel="stylesheet" type="text/css">
-    <link href="app/pairs/css/image.css" rel="stylesheet" type="text/css">
-    <link href="app/pairs/css/style.css" rel="stylesheet" type="text/css">
+    <link href="build/lending.css" rel="stylesheet" type="text/css">
+    <script src="script/plagins/scrollplug.js"></script>
+    <link href="build/lines.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="build/pairs.css" type="text/css">
 </head>
 <body>
 <header class="section">
@@ -43,92 +41,36 @@
 
 <main>
     <div class="skills-block section">
-        <a name="skills"></a>
         <div class="head">
             <p>SKILLS</p>
             <h1>CHECK IT OUT MY PROGRESS IN LEARNING FRONTEND</h1>
         </div>
-
-        <div class="skill_container">
-            <div class="holder">
-                <div class="html skill">
-                    <img src="image/skills/html.png" alt="HTML">
-                    <p>I have good knowledge of HTML, including a new features of HTML5.
-                        I have been working with html for one year, in the began it was
-                        just a hobby, but then it turned into something more substantial.
-                        I started with the development of simple landing pages for my friends.
-                        Then i realized that this topic interests me more than just a development
-                        lending, and I went on!</p>
-                </div>
+        <div class="programmer-skills">
+            <img src="image/skills/programmer.png" class="programmer" alt="programmer">
+            <div class="html skill">
+                <img src="image/skills/html.png" alt="HTML">
             </div>
-            <div class="holder">
-                <div class="css skill">
-                    <img src="image/skills/css.png" alt="CSS">
-                    <p>Of course we all know that CSS does not happen without HTML :)
-                        Studying of CSS properties began about the same time that and HTML.
-                        The more information I learned - there are more web development open new frontiers
-                        for me. Not to say that the study was given to me very easy,
-                        but all aspects of the design are subject to the usual logic in understanding
-                        the essence of this once - then could only draw information and assimilate it.
-                        After six months of studying the layout - I realized that I was not enough ...
-                        and I went on!</p>
-                </div>
+            <div class="css skill">
+                <img src="image/skills/css.png" alt="CSS">
             </div>
-            <div class="holder">
-                <div class="js skill">
-                    <img src="image/skills/js.png" alt="JavaScript">
-                    <p>At the stage of the study JavaScript all was more fun and interesting!
-                        This is a very flexible language with great potential. At this stage the
-                        new frontiers of web developing opened for me the greatest
-                        extent. As you will know more and more development mysteries, in
-                        your hands are powerful tools that you can use so many - as much you will
-                        have enough imagination. I love what I do and in the future i plan to subdue
-                        all new heights IT!</p>
-                </div>
+            <div class="js skill">
+                <img src="image/skills/js.png" alt="JavaScript">
             </div>
-            <div class="holder">
-                <div class="library skill">
-                    <img src="image/skills/Library.png" alt="library">
-                    <p> At the stage of studying the layout such means for me began: pre-processor LESS,
-                        without which it is very difficult to appear to work with cascading style sheets,
-                        and of course all the famous Bootstrap, with which you can build a website as a
-                        constructor! On JavaScript courses I successful have learned the jQuery library and module builder webpack.
-                        In the future, I plan to study client framework Vue and server-side Node.js.</p>
-                </div>
+            <div class="jquery skill">
+                <img src="image/skills/jQuery.png" alt="jQuery">
+            </div>
+            <div class="skill webpack">
+                <img src="image/skills/Webpack.png" alt="webpack">
+            </div>
+            <div class="skill github">
+                <img src="image/skills/GIT.png" alt="git">
             </div>
         </div>
-    </div>
+        <div class="resume">
+            <img src="image/skills/cv_logo.png" alt="resume" class="resume_image">
+            <a href="cv.PDF" class="download_pdf" title="Download CV">Get CV</a>
+        </div>
 
-    <div class="education_block section">
-        <h1 id="univ_h1">EDUCATION</h1>
-        <div class="university_text">
-            <h2>School and university</h2>
-            <p>Let's start in order :) I started my way in high school №55 Kharkiv.
-                The school with mathematical bias, which I finished in 2009. Then, in the same year I went
-                to National Aerospace University  "Kharkiv Aviation Institute" at the
-                faculty of aircraft. <strike>Study was boring and tedious</strike> Institute years were probably the most fun and
-                carefree times! Diploma of higher education I received in 2014, after 5 years of study. After
-                university was the question of further action, work and life in general. To think about career in IT
-                I did not come immediately, it took nearly two years trying to find my place.
-                My studying IT started with the usual interest, to be continued...</p>
-        </div>
-        <div class="picture_university">
-
-        </div>
-        <div class="source_it_picture">
-
-        </div>
-        <div class="source_it_text">
-            <h2>Studying web developing </h2>
-            <p>As I said earlier, interest in web development, I started at home,
-                using boundless expanse of the internet, video, literature. In the study of HTML, HTML5 and CSS helped me a lot, htmlacademy
-                project, which course I studied thoroughly. After I learned to
-                write unpretentious Landing and in general met with the layout, I started to look towards
-                the expansion of suggested its features, or to be more precise - in the direction of
-                JavaScript. In November 2016 I have started a course JavaScript in it school - SourceIT,
-                in which, as you may have guessed, I was directly involved. And actually I here) I hope
-                you enjoy my site, because you still waiting for further surprises)</p>
-        </div>
     </div>
 
     <div class="portfolio_block section">
@@ -168,16 +110,8 @@
             </p>
         </div>
     </div>
-
-
 </main>
-
-
-<script src="script/plagins/jquery-3.1.1.js"></script>
 <script src="script/plagins/ease.js"></script>
-<script src="script/plagins/scrollplug.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/SuperScrollorama/1.0.3/jquery.superscrollorama.js"></script>
-<script src="script/bundle.js"></script>
+<script src="build/lending.js"></script>
 </body>
 </html>

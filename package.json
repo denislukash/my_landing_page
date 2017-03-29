@@ -2,8 +2,16 @@
   "name": "application-name",
   "version": "0.0.1",
   "devDependencies": {
+    "css-loader": "^0.27.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
     "file-watcher-webpack-plugin": "^1.1.0",
+    "image-webpack-loader": "^3.2.0",
+    "less": "^2.7.2",
+    "less-loader": "^3.0.0",
+    "style-loader": "^0.14.1",
     "uglify-js": "github:mishoo/UglifyJS2#harmony",
+    "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
     "webpack-uglify-js-plugin": "^1.1.9"
   }

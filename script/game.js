@@ -15,7 +15,7 @@ $linesTitleImage.on("click", function () {
     }).then(function () {
        return $($gameFieldHolder).load("app/lines/index.html #game-area").promise()
     }).then(function () {
-        $.getScript("app/lines/lines.js");
+        $.getScript("build/lines.js");
     });
     
     $($rulesContainer).load("app/lines/index.html #lines_rules");
@@ -45,7 +45,7 @@ $pairsTitleImage.on("click", function () {
     }).then(function () {
        return $($gameFieldHolder).load("app/pairs/index.html .holder_pairs").promise()
     }).then(function () {
-        $.getScript("app/pairs/script/index.js");
+        $.getScript("build/pairs.js");
     });
     $($rulesContainer).load("app/pairs/index.html #pairs_rules");
 });

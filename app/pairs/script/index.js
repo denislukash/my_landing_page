@@ -1,5 +1,8 @@
 "use strict";
 
+import "../css/style.less";
+import "../css/image.less";
+
 function Counter(startCountValue) {
 
     var self = this;
